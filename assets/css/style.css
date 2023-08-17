@@ -5,7 +5,11 @@
 html {
     -webkit-text-size-adjust: none;
     box-sizing: border-box;
-    font-family: "Open Sans","arial","Apple SD Gothic Neo","Noto Sans CJK KR","본고딕","KoPubDotum","나눔바른고딕","나눔고딕","NanumGothic","맑은고딕","Malgun Gothic",sans-serif;
+    font-family: Menlo, Monaco, MesloLGS NF, 'Courier New', monospace, "Noto Sans KR";
+}
+
+code {
+    font-family: Menlo, Monaco, MesloLGS NF, 'Courier New', monospace, "Noto Sans KR";
 }
 
 a {
@@ -28,12 +32,12 @@ main {
     margin: auto;
 }
 
-.site-title {
+.site-title > h1 {
     color: #858BB9;
     margin: 1rem;
     width: 100%;
     text-align: center;
-    font-size: 1rem;
+    font-size: 1.5rem;
 }
 
 h1 {
