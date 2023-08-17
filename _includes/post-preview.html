@@ -8,7 +8,12 @@
     <p class="title"><a href="{{ site.baseurl }}{{ url }}">{{ title }}</a></p>
     {% if include.description %}
         <p class="description">
-            {{ include.post.description | escape }}
+            {% if include.post.description == null %}
+                {% assign description = include.post.content | strip_html | truncatewords: 50 %}
+            {% else %}
+                {% assign description = include.post.description | escape %}
+            {% endif %}
+            {{ description }}
         </p>
     {% endif %}
 </div>
