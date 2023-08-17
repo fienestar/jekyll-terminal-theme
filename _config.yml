@@ -15,7 +15,7 @@ url:
 baseurl: /fiene-blog-theme
 
 # timezozne e.g. Asia/Seoul
-timezone:
+timezone: Asia/Seoul
 
 # this is menu
 #menu:
