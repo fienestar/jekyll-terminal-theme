@@ -1,0 +1,40 @@
+<div id="menu" hidden>
+    {% include command/index.html cwd="~" text="cat menu.md" comment="show menu" %}
+    <nav>
+    {% for item in site.menu %}
+        {% if item.text %}
+            {% assign html = item.text | escape %}
+        {% elsif item.html %}
+            {% assign html = item.html %}
+        {% endif %}
+
+        {% if item.url %}
+            {% assign first = item.url | slice: 0 %}
+            {% if first == '/' %}
+                {% assign url = site.baseurl | append: item.url %}
+            {% else %}
+                {% assign url = item.url %}
+            {% endif %}
+            <a class="menu-item" href="{{ url }}">{{ item.text | escape }}</a>
+        {% elsif html %}
+            <div class="menu-item">{{ html }}</div>
+        {% endif %}
+    {% endfor %}
+    </nav>
+</div>
+<script>
+    const menuButton = document.querySelector('.menu-button');
+    const menu = document.getElementById('menu');
+    const main = document.querySelector('main');
+
+    menuButton.addEventListener('click', () => {
+        menu.hidden = !menu.hidden;
+        main.hidden = !main.hidden;
+
+        if(menuButton.classList.contains('active')) {
+            menuButton.classList.remove('active');
+        } else {
+            menuButton.classList.add('active');
+        }
+    });
+</script>

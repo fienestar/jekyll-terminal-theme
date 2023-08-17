@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base target="_self" href="{{ site.baseurl }}"/>
     <link href='https://fonts.googleapis.com/css?family=Noto Sans KR' rel='stylesheet'>
     <link href="{{ site.baseurl }}/assets/css/highlight.css" rel="stylesheet" type="text/css">
     <link href="{{ site.baseurl }}/assets/css/style.css" rel="stylesheet" type="text/css">
@@ -11,9 +12,18 @@
     <title>{{ page.title }}</title>
 </head>
 <body>
-    <a class="site-title" href="{{ site.baseurl }}/"><p>{{ site.title }}</p></a>
+<div class="root">
+    <header>
+        <div class="site-title"><a href="{{ site.baseurl }}/">{{ site.title }}</a></div>
+        {% if site.menu %}
+        <div class="menu-button">#</div>
+        {% endif %}
+    </header>
     <main>
     {{ content }}
     </main>
+    {% if site.menu %}
+    {% include menu.html %}
+    {% endif %}
 </body>
 </html>
