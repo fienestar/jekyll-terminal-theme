@@ -14,6 +14,9 @@ url:
 # the subpath of your site, e.g. /blog
 baseurl:
 
+# timezozne e.g. Asia/Seoul
+timezone:
+
 # Build settings
 markdown: kramdown
 kramdown:
