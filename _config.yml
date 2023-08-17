@@ -12,7 +12,7 @@ domain:
 # the base hostname & protocol for your site, e.g. http://example.com
 url:
 # the subpath of your site, e.g. /blog
-baseurl:
+baseurl: /fiene-blog-theme
 
 # timezozne e.g. Asia/Seoul
 timezone:
