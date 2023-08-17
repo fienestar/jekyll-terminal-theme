@@ -11,7 +11,12 @@ layout: base
     commandText.innerText = command;
   }
 
-  const request_path = decodeURIComponent(location.pathname.slice({{ site.baseurl.size }}));
+  const baseurl = "{{ site.baseurl }}";
+  let request_path = location.pathname;
+
+  if(request_path.startsWith(baseurl)) {
+    request_path = request_path.slice(baseurl.length);
+  }
 
   setCommand(`cat "${request_path}"`)
 
