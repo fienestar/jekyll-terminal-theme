@@ -32,15 +32,12 @@ main {
     margin: auto;
 }
 
-.site-title > h1 {
+.site-title > p {
+    font-weight: 100;
     color: #858BB9;
     margin: 1rem;
     text-align: center;
     font-size: 1.5rem;
-}
-
-h1 {
-    font-weight: 100;
 }
 
 .post {
@@ -67,9 +64,10 @@ h1 {
     color: rgba(170, 170, 170, 0.6);
 }
 
-.post-title {
+.post-title > h1 {
+    font-weight: 100;
     margin: 0;
-    font-size: 1.75rem;
+    font-size: 2.5rem;
     color: #94EEBC;
 }
 
@@ -103,7 +101,7 @@ th, td {
     padding-left: 5px;
 }
 
-.category-posts {
+.post-list {
     margin-bottom: 2.5px;
     padding-left: 10px;
 }
@@ -112,7 +110,7 @@ th, td {
     background-color: rgba(172, 65, 66, 0.4);
 }
 
-#categories.single-category .category > .name, #categories.single-category .category > .size {
+#categories.single-category .category > h2 > .name, #categories.single-category .category > .size {
     display: none;
 }
 
@@ -138,7 +136,9 @@ th, td {
     margin-left: 5px;
 }
 
-.category > .name, .category > .size {
+.category > h2, .category > .size {
+    font-weight: 400;
+    font-size: 1rem;
     display: inline-block;
 }
 

@@ -4,12 +4,11 @@
     {% assign posts = paginator.posts %}
 {% endif %}
 
+<h1 hidden>Posts</h1>
 <section id="post-list">
     {% include command/index.html cwd="~" text="ls -ltR " comment="list all posts" %}
     <div class="result-success">
-    {% for post in posts %}
-        {% include post-preview.html post=post description=true %}
-    {% endfor %}
+    {% include post-list.html posts=posts description=true %}
     {% include pagination/index.html %}
     </div>
 </section>

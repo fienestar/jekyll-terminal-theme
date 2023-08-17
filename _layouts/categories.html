@@ -2,6 +2,7 @@
 layout: base
 ---
 
+<h1 hidden>Categories</h1>
 <section id="categories">
   {% include command/index.html cwd="~" text="" %}
   <div class="result-success">
@@ -10,14 +11,11 @@ layout: base
       {% assign posts = pair[1] %}
       {% assign category_url = category | url_encode | replace: '+', '%20' %}
     <div class="category" id="-{{ category }}" hidden>
-      <a class="name">{{ category }}/</a>
+      <h2>
+        <a class="name">{{ category }}/</a>
+      </h2>
       <p class="size">({{ posts.size }})</p>
-      <p class="total-text">total {{ posts.size }}</p>
-      <div class="category-posts">
-        {% for post in posts %}
-          {% include post-preview.html post=post %}
-        {% endfor %}
-      </div>
+      {% include post-list.html posts=posts %}
     </div>
     {% endfor %}
   </div>
@@ -49,7 +47,7 @@ layout: base
     } else {
       setCommand(`ls -d */`, `# list all categories`);
 
-      const category_post_containers = document.querySelectorAll('.category-posts');
+      const category_post_containers = document.querySelectorAll('.post-list');
       category_post_containers.forEach(category_post_container => {
         category_post_container.hidden = true;
         category_post_container.parentNode.addEventListener('click', () => {

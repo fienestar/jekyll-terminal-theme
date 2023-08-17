@@ -1,0 +1,6 @@
+<p class="total-text">total {{ posts.size }}</p>
+<div class="post-list">
+{% for post in include.posts %}
+    {% include post-preview.html post=post description=include.description %}
+{% endfor %}
+</div>
