@@ -24,3 +24,5 @@ gem "http_parser.rb", "~> 0.6.0", :platforms => [:jruby]
 
 # error on ruby 3.x
 gem "webrick", "~> 1.8"
+
+gem "rouge", "~> 3.26"
