@@ -1,24 +1,21 @@
 ---
-layout: page
+layout: base
 ---
 
-<style type="text/css" media="screen">
-  .container {
-    margin: 10px auto;
-    max-width: 600px;
-    text-align: center;
+{% include command/index.html cwd="~" text="" %}
+<h1 hidden>404 Page not found</h1>
+<p id="page-not-found-error" class="result-error" hidden></p>
+<script>
+  function setCommand(command, comment = "") {
+    const commandText = document.querySelector('.command > .text');
+    commandText.innerText = command;
   }
-  h1 {
-    margin: 30px 0;
-    font-size: 4em;
-    line-height: 1;
-    letter-spacing: -1px;
-  }
-</style>
 
-<div class="container">
-  <h1>404</h1>
+  const request_path = decodeURIComponent(location.pathname.slice({{ site.baseurl.size }}));
 
-  <p><strong>Page not found :(</strong></p>
-  <p>The requested page could not be found.</p>
-</div>
+  setCommand(`cat "${request_path}"`)
+
+  const pageNotFoundError = document.querySelector('#page-not-found-error');
+  pageNotFoundError.innerText = `cat: ${request_path}: No such file or directory`;
+  pageNotFoundError.hidden = false;
+</script>  
