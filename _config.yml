@@ -1,6 +1,6 @@
 # https://jekyllrb.com/docs/configuration/
 
-title: Your awesome title
+title: My Blog Title
 email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
@@ -16,6 +16,10 @@ baseurl:
 
 # Build settings
 markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
 plugins:
   - jekyll-sitemap
   - jekyll-feed
@@ -29,3 +33,7 @@ exclude:
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
+
+css: assets/css
+js: assets/js
+images: assets/images

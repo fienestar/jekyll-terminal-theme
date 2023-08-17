@@ -1,0 +1,15 @@
+{% assign posts = site.posts %}
+
+{% if site.paginate > 0 %}
+    {% assign posts = paginator.posts %}
+{% endif %}
+
+<section id="post-list">
+    {% include command/index.html cwd="~" text="ls -ltR " comment="list all posts" %}
+    <div class="result-success">
+    {% for post in posts %}
+        {% include post-preview.html post=post description=true %}
+    {% endfor %}
+    {% include pagination/index.html %}
+    </div>
+</section>

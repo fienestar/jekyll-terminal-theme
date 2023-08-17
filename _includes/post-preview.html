@@ -1,0 +1,14 @@
+{% assign title = include.post.title %}
+{% assign date = include.post.date | date: "%F" %}
+{% assign date_title = include.post.date | date: "%T %z" %}
+{% assign url = include.post.url %}
+
+<div class="post-preview">
+    <p class="date" title="{{ date_title }}">{{ date }}</p>
+    <p class="title"><a href="{{ url }}">{{ title }}</a></p>
+    {% if include.description %}
+        <p class="description">
+            {{ include.post.description | escape }}
+        </p>
+    {% endif %}
+</div>

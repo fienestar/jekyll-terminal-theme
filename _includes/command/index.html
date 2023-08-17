@@ -1,0 +1,17 @@
+{% assign cwd = include.cwd | default: "~" %}
+{% assign text = include.text | default: "" %}
+{% if include.comment %}
+    {% assign comment = "# " | append: include.comment %}
+{% else %}
+    {% assign comment = "" %}
+{% endif %}
+<div class="command">
+    {% include command/path.html path = cwd %}
+    <div class="seperator"> ❯ </div>
+    <div class="text">
+        {{ text }}
+    </div>
+    <div class="comment">
+        {{ comment }}
+    </div>
+</div>

@@ -1,0 +1,67 @@
+---
+layout: base
+---
+
+<section id="categories">
+  {% include command/index.html cwd="~" text="" %}
+  <div class="result-success">
+    {% for pair in site.categories %}
+      {% assign category = pair[0] %}
+      {% assign posts = pair[1] %}
+      {% assign category_url = category | url_encode | replace: '+', '%20' %}
+    <div class="category" id="-{{ category }}" hidden>
+      <a class="name">{{ category }}/</a>
+      <p class="size">({{ posts.size }})</p>
+      <p class="total-text">total {{ posts.size }}</p>
+      <div class="category-posts">
+        {% for post in posts %}
+          {% include post-preview.html post=post %}
+        {% endfor %}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  <p id="category-not-found-error" class="result-error" hidden></p>
+  <script>
+    function setCommand(text, comment = "") {
+      const commandText = document.querySelector('.command > .text');
+      commandText.innerText = text;
+
+      const commandComment = document.querySelector('.command > .comment');
+      commandComment.innerText = comment;
+    }
+  
+    if(location.hash[0] === '#') {
+      const category = decodeURIComponent(location.hash.slice(1));
+      const categoryElement = document.querySelector(`#-${category}`);
+  
+      setCommand(`ls -ltR ${category}`, `# list posts in ${category} category`);
+  
+      if(categoryElement !== null) {
+        const categories = document.querySelector('#categories');
+        categories.classList.add('single-category');
+        categoryElement.hidden = false;
+      } else {
+        const categoryNotFoundError = document.querySelector('#category-not-found-error');
+        categoryNotFoundError.innerText = `ls: ${category}: No such file or directory`;
+        categoryNotFoundError.hidden = false;
+      }
+    } else {
+      setCommand(`ls -d */`, `# list all categories`);
+
+      const category_post_containers = document.querySelectorAll('.category-posts');
+      category_post_containers.forEach(category_post_container => {
+        category_post_container.hidden = true;
+        category_post_container.parentNode.addEventListener('click', () => {
+          category_post_container.hidden = !category_post_container.hidden;
+        });
+      });
+
+      const category_list = document.querySelectorAll('.category');
+
+      category_list.forEach(category => {
+        category.hidden = false;
+      });
+    }
+  </script>  
+</section>

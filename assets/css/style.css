@@ -1,0 +1,145 @@
+* {
+    margin: 0
+}
+
+html {
+    -webkit-text-size-adjust: none;
+    box-sizing: border-box;
+    font-family: "Open Sans","arial","Apple SD Gothic Neo","Noto Sans CJK KR","본고딕","KoPubDotum","나눔바른고딕","나눔고딕","NanumGothic","맑은고딕","Malgun Gothic",sans-serif;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+body {
+    color: #FFFFFF;
+    background-color: #1c1a2a;
+}
+
+main {
+    padding: 1rem;
+    max-width: 40rem;
+    margin: auto;
+}
+
+.site-title {
+    color: #858BB9;
+    margin: 1rem;
+    width: 100%;
+    text-align: center;
+    font-size: 1rem;
+}
+
+h1 {
+    font-weight: 100;
+}
+
+.post {
+    font-size: 1rem;
+}
+
+.path {
+    color: #F5DB71;
+}
+
+.command {
+    font-size: 1rem;
+}
+
+.command > * {
+    display: inline-block;
+}
+
+.command > .seperator {
+    color: #3af180;
+}
+
+.command > .comment {
+    color: rgba(170, 170, 170, 0.6);
+}
+
+.post-title {
+    margin: 0;
+    font-size: 2rem;
+    color: #94EEBC;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+th {
+    font-weight: 400;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+tr:not(tr:last-child) > td {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+th, td {
+    padding: 5px 10px;
+}
+
+.post table {
+    margin: 5px auto;
+}
+
+.post .highlighter-rouge {
+    margin: 5px 0;
+}
+
+.result-error, .result-success {
+    margin-top: 5px;
+    padding-left: 5px;
+}
+
+.category-posts {
+    margin-bottom: 2.5px;
+    padding-left: 10px;
+}
+
+.result-error {
+    background-color: rgba(172, 65, 66, 0.4);
+}
+
+#categories.single-category .category > .name, #categories.single-category .category > .size {
+    display: none;
+}
+
+.category > .total-text {
+    display: none;
+}
+
+#categories.single-category .category > .total-text {
+    display: block;
+}
+
+.post-preview > .title {
+    display: inline-block;
+    color: #94EEBC;
+}
+
+.post-preview > .date {
+    display: inline-block;
+}
+
+.post-preview > .description {
+    color: #858BB9;
+    margin-left: 5px;
+}
+
+.category > .name, .category > .size {
+    display: inline-block;
+}
+
+.category > .size {
+    color: #F5DB71;
+    padding-left: 2px;
+}

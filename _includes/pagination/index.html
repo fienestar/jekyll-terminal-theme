@@ -1,0 +1,10 @@
+<nav class="pagination">
+{% if site.paginate > 0 %}
+    {% assign current_page = paginator.page %}
+    {% assign total_page_count = paginator.total_pages %}
+
+    {% for page in (1..paginator.total_pages) %}
+        <a href="{% include pagination/path.html page=page %}">{{page}}</a>
+    {% endfor %}
+{% endif %}
+</nav>
