@@ -1,5 +1,5 @@
 {% if include.page > 1  %}
 {{ site.paginate_path | relative_url | replace: '//', '/' | replace: ':num', include.page }}
 {% else %}
-/
+{{ site.baseurl }}/
 {% endif %}
