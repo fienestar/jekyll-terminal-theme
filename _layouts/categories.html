@@ -21,9 +21,9 @@ layout: base
   </div>
   <p id="category-not-found-error" class="result-error" hidden></p>
   <script>
-    function setCommand(text, comment = "") {
+    function setCommand(command, comment = "") {
       const commandText = document.querySelector('.command > .text');
-      commandText.innerText = text;
+      commandText.innerHTML = command;
 
       const commandComment = document.querySelector('.command > .comment');
       commandComment.innerText = comment;
@@ -32,8 +32,12 @@ layout: base
     if(location.hash[0] === '#') {
       const category = decodeURIComponent(location.hash.slice(1));
       const categoryElement = document.querySelector(`#-${category}`);
+
+      const category_command_element = document.createElement('a');
+      category_command_element.classList.add('command-tag');
+      category_command_element.innerText = category;
   
-      setCommand(`ls -ltR ${category}`, `# list posts in ${category} category`);
+      setCommand(`ls -ltR ${category_command_element.outerHTML}`, `# list posts in ${category} category`);
   
       if(categoryElement !== null) {
         const categories = document.querySelector('#categories');

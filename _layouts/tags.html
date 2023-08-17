@@ -21,9 +21,9 @@ layout: base
   </div>
   <p id="tag-not-found-error" class="result-error" hidden></p>
   <script>
-    function setCommand(text, comment = "") {
+    function setCommand(command, comment = "") {
       const commandText = document.querySelector('.command > .text');
-      commandText.innerText = text;
+      commandText.innerHTML = command;
 
       const commandComment = document.querySelector('.command > .comment');
       commandComment.innerText = comment;
@@ -32,8 +32,12 @@ layout: base
     if(location.hash[0] === '#') {
       const tag = decodeURIComponent(location.hash.slice(1));
       const tagElement = document.querySelector(`#-${tag}`);
+
+      const tag_command_element = document.createElement('a');
+      tag_command_element.classList.add('command-tag');
+      tag_command_element.innerText = `#${tag}`;
   
-      setCommand(`find **/*.md -type f -print0 | xargs -0 grep -l "#${tag}"`, `# list posts with #${tag}`);
+      setCommand(`find **/*.md -type f -print0 | xargs -0 grep -l "${tag_command_element.outerHTML}"`, `# list posts with #${tag}`);
   
       if(tagElement !== null) {
         const tags = document.querySelector('#tags');
