@@ -3,6 +3,7 @@ layout: post
 title:  "Hello world!"
 date:   2023-08-17 9:00
 categories: lol
+tags: [hello, world]
 ---
 
 this is my first post!

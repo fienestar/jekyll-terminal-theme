@@ -1,0 +1,65 @@
+---
+layout: base
+---
+
+<h1 hidden>Tags</h1>
+<section id="tags">
+  {% include command/index.html cwd="~" text="" %}
+  <div class="result-success">
+    {% for pair in site.tags %}
+      {% assign tag = pair[0] %}
+      {% assign posts = pair[1] %}
+      {% assign tag_url = tag | url_encode | replace: '+', '%20' %}
+    <div class="tag" id="-{{ tag }}" hidden>
+      <h2>
+        <a class="name">#{{ tag }}</a>
+      </h2>
+      <p class="size">({{ posts.size }})</p>
+      {% include post-list.html posts=posts %}
+    </div>
+    {% endfor %}
+  </div>
+  <p id="tag-not-found-error" class="result-error" hidden></p>
+  <script>
+    function setCommand(text, comment = "") {
+      const commandText = document.querySelector('.command > .text');
+      commandText.innerText = text;
+
+      const commandComment = document.querySelector('.command > .comment');
+      commandComment.innerText = comment;
+    }
+  
+    if(location.hash[0] === '#') {
+      const tag = decodeURIComponent(location.hash.slice(1));
+      const tagElement = document.querySelector(`#-${tag}`);
+  
+      setCommand(`find **/*.md -type f -print0 | xargs -0 grep -l "#${tag}"`, `# list posts with #${tag}`);
+  
+      if(tagElement !== null) {
+        const tags = document.querySelector('#tags');
+        tags.classList.add('single-tag');
+        tagElement.hidden = false;
+      } else {
+        const tagNotFoundError = document.querySelector('#tag-not-found-error');
+        tagNotFoundError.innerText = `ls: ${tag}: No such file or directory`;
+        tagNotFoundError.hidden = false;
+      }
+    } else {
+      setCommand(`egrep -oh '#[^ #]+' **/*.md | uniq`, `# list all tags`);
+
+      const tag_post_containers = document.querySelectorAll('.post-list');
+      tag_post_containers.forEach(tag_post_container => {
+        tag_post_container.hidden = true;
+        tag_post_container.parentNode.addEventListener('click', () => {
+          tag_post_container.hidden = !tag_post_container.hidden;
+        });
+      });
+
+      const tag_list = document.querySelectorAll('.tag');
+
+      tag_list.forEach(tag => {
+        tag.hidden = false;
+      });
+    }
+  </script>  
+</section>
