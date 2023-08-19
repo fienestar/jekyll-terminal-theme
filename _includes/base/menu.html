@@ -1,6 +1,6 @@
 <div id="menu" hidden>
     {% include command/index.html cwd="~" text="cat menu.md" comment="show menu" %}
-    <nav>
+    <nav class="post">
     {% for item in site.menu %}
         {% if item.text %}
             {% assign html = item.text | escape %}

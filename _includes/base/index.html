@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include base/head.html %}
+    {% include base/custom-head.html %}
+    <title>{{ page.title }}</title>
+</head>
+<body>
+<div class="root">
+    <header>
+        <div class="site-title"><a href="{{ site.baseurl }}/">{{ site.title }}</a></div>
+        {% if site.menu %}
+        <div class="menu-button">#</div>
+        {% endif %}
+    </header>
+    <main>
+    {{ content }}
+    </main>
+    {% if site.menu %}
+    {% include base/menu.html %}
+    {% endif %}
+</body>
+</html>
