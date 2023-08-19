@@ -1,0 +1,28 @@
+.result-error, .result-success {
+    margin-top: 5px;
+    padding-left: 5px;
+}
+
+.result-error {
+    background-color: rgba(172, 65, 66, 0.4);
+}
+
+.command-tag, .command-category, .path {
+    color: #F5DB71;
+}
+
+.command {
+    font-size: 0.8rem;
+}
+
+.command > * {
+    display: inline-block;
+}
+
+.command > .seperator {
+    color: #3af180;
+}
+
+.command > .comment {
+    color: rgba(170, 170, 170, 0.6);
+}

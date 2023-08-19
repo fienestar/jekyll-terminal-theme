@@ -1,7 +1,6 @@
-/*
-  forked from base16.dark
-  modified background color
-*/
+.highlight {
+  white-space: pre-wrap;
+}
 
 .language-bash > .highlight .nv {
   color: #a54a4a;
