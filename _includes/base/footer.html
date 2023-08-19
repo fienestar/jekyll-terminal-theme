@@ -1,0 +1,18 @@
+<footer>
+    {% if site.footer.name %}
+        <p class="copyright">
+        © {{ 'now' | date: '%Y' }}
+        {% if site.footer.link %}
+            <a href="{{ site.footer.link }}" _btarget="_blank">{{ site.footer.name }}</a>
+        {% else %}
+            {{ site.footer.name | append: "." }}
+        {% endif %}
+            All rights reserved.
+        </p>
+    {% endif %}
+
+    <p>
+        Using the <a href="https://jekyllrb.com/" target="_blank">Jekyll</a>
+        and <a href="https://github.com/fienestar/jekyll-terminal-theme" target="_blank">Terminal</a> theme.
+    </p>
+</footer>

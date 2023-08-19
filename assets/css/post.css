@@ -6,7 +6,7 @@
     color: #F5DB71;
 }
 
-.page a, .post a, a.menu-item {
+.post a {
     color: rgb(75, 204, 255);
 }
 

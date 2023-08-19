@@ -124,3 +124,20 @@ main {
     color: #F5DB71;
     padding-left: 2px;
 }
+
+.root {
+    min-height: calc(100vh - 5.5rem)
+}
+
+footer {
+    height: 3rem;
+    font-size: 0.9rem;
+    max-width: 40rem;
+    width: 100%;
+    text-align: center;
+    margin: 1rem auto 0.5rem;
+}
+
+footer a {
+    color: rgb(75, 204, 255);
+}
