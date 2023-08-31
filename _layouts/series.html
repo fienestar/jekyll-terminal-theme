@@ -9,7 +9,7 @@ layout: base
     {% assign series_list = site.posts | group_by: "series" %}
     {% for series in series_list %}
       {% if series.name != "" %}
-        {% include series.html name=series.name posts=series.items %}
+        {% include post-list/series.html name=series.name posts=series.items %}
       {% endif %}
     {% endfor %}
   </div>

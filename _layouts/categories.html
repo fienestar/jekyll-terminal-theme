@@ -9,11 +9,11 @@ layout: base
     {% for pair in site.categories %}
       {% assign name = pair[0] %}
       {% assign posts = pair[1] %}
-      {% include category.html name=name posts=posts %}
+      {% include post-list/category.html name=name posts=posts %}
     {% endfor %}
     {% if site.external-posts-category-name %}
       {% assign external-posts = site.posts | where_exp: "post", "post.redirect" %}
-      {% include category.html name=site.external-posts-category-name posts=external-posts description=true %}
+      {% include post-list/category.html name=site.external-posts-category-name posts=external-posts description=true %}
     {% endif %}
   </div>
   <p id="category-not-found-error" class="result-error" hidden></p>
