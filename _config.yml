@@ -56,3 +56,5 @@ exclude:
 css: assets/css
 js: assets/js
 images: assets/images
+
+# external-posts-category-name: external links # add external post using `redirect: {uri}` in post front matter

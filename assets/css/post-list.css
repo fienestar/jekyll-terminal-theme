@@ -8,6 +8,10 @@
     color: #94EEBC;
 }
 
+.post-preview > .title > .post-preview-redirect-title {
+    color: orange;
+}
+
 .post-preview > .date {
     display: inline-block;
 }

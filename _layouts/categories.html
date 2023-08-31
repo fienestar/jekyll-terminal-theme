@@ -7,17 +7,14 @@ layout: base
   {% include command/index.html cwd="~" text="" %}
   <div class="result-success">
     {% for pair in site.categories %}
-      {% assign category = pair[0] %}
+      {% assign name = pair[0] %}
       {% assign posts = pair[1] %}
-      {% assign category_url = category | url_encode | replace: '+', '%20' %}
-    <div class="category" id="-{{ category }}" hidden>
-      <h2>
-        <a class="name">{{ category }}/</a>
-      </h2>
-      <p class="size">({{ posts.size }})</p>
-      {% include post-list.html posts=posts %}
-    </div>
+      {% include category.html name=name posts=posts %}
     {% endfor %}
+    {% if site.external-posts-category-name %}
+      {% assign external-posts = site.posts | where_exp: "post", "post.redirect" %}
+      {% include category.html name=site.external-posts-category-name posts=external-posts description=true %}
+    {% endif %}
   </div>
   <p id="category-not-found-error" class="result-error" hidden></p>
   <script>

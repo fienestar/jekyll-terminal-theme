@@ -5,7 +5,14 @@
 
 <div class="post-preview">
     <p class="date" title="{{ date_title }}">{{ date }}</p>
-    <p class="title"><a href="{{ site.baseurl }}{{ url }}">{{ title }}</a></p>
+    <p class="title"><a
+        {% if include.post.redirect %}
+            class="post-preview-redirect-title"
+            href="{{ include.post.redirect }}"
+        {% else %}
+            href="{{ site.baseurl }}{{ url }}"
+        {% endif %}
+    >{{ title }}</a></p>
     {% if include.description %}
         <p class="description">
             {% if include.post.description == null %}
