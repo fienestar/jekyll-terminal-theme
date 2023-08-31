@@ -7,12 +7,12 @@ layout: base
   {% include command/index.html cwd="~" text="" %}
   <div class="result-success">
     {% for pair in site.tags %}
-      {% assign tag = pair[0] %}
+      {% assign name = pair[0] %}
       {% assign posts = pair[1] %}
       {% assign tag_url = tag | url_encode | replace: '+', '%20' %}
-    <div class="tag" id="-{{ tag }}" hidden>
+    <div class="tag" id="-{{ name }}" hidden>
       <h2>
-        <a class="name">#{{ tag }}</a>
+        <a class="name">#{{ name }}</a>
       </h2>
       <p class="size">({{ posts.size }})</p>
       {% include post-list.html posts=posts %}
