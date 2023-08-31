@@ -11,7 +11,7 @@
         {% if item.url %}
             {% assign first = item.url | slice: 0 %}
             {% if first == '/' %}
-                {% assign url = site.baseurl | append: item.url %}
+                {% assign url = item.url | relative_url%}
             {% else %}
                 {% assign url = item.url %}
             {% endif %}
