@@ -1,0 +1,12 @@
+{% assign name = include.name %}
+{% assign posts = include.posts %}
+{% assign series_url = series | url_encode | replace: '+', '%20' %}
+{% if posts.size %}
+<div class="series" id="-{{ name }}" hidden>
+<h2>
+    <a class="name">{{ name }}</a>
+</h2>
+<p class="size">({{ posts.size }})</p>
+{% include post-list.html posts=posts description=include.description %}
+</div>
+{% endif %}

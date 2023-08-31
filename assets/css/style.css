@@ -103,6 +103,18 @@ main {
     display: block;
 }
 
+#series.single-series .series > h2, #series.single-series .series > .size {
+    display: none;
+}
+
+.series > .total-text {
+    display: none;
+}
+
+#series.single-series .series > .total-text {
+    display: block;
+}
+
 .category > h2, .category > .size {
     font-weight: 400;
     font-size: 1rem;
@@ -121,6 +133,17 @@ main {
 }
 
 .tag > .size {
+    color: #F5DB71;
+    padding-left: 2px;
+}
+
+.series > h2, .series > .size {
+    font-weight: 400;
+    font-size: 1rem;
+    display: inline-block;
+}
+
+.series > .size {
     color: #F5DB71;
     padding-left: 2px;
 }

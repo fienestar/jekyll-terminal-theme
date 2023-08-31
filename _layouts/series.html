@@ -1,0 +1,63 @@
+---
+layout: base
+---
+
+<h1 hidden>Series</h1>
+<section id="series">
+  {% include command/index.html cwd="~/series" text="" %}
+  <div class="result-success">
+    {% assign series_list = site.posts | group_by: "series" %}
+    {% for series in series_list %}
+      {% if series.name != "" %}
+        {% include series.html name=series.name posts=series.items %}
+      {% endif %}
+    {% endfor %}
+  </div>
+  <p id="series-not-found-error" class="result-error" hidden></p>
+  <script>
+    function setCommand(command, comment = "") {
+      const commandText = document.querySelector('.command > .text');
+      commandText.innerHTML = command;
+
+      const commandComment = document.querySelector('.command > .comment');
+      commandComment.innerText = comment;
+    }
+  
+    if(location.hash[0] === '#') {
+      const series = decodeURIComponent(location.hash.slice(1));
+      const seriesElement = document.querySelector(`#-${series}`);
+
+      const series_command_element = document.createElement('a');
+      series_command_element.classList.add('command-tag');
+      series_command_element.innerText = series;
+  
+      setCommand(`ls -ltR ${series_command_element.outerHTML}`, `# list posts in ${series} series`);
+  
+      if(seriesElement !== null) {
+        const series = document.querySelector('#series');
+        series.classList.add('single-series');
+        seriesElement.hidden = false;
+      } else {
+        const seriesNotFoundError = document.querySelector('#series-not-found-error');
+        seriesNotFoundError.innerText = `ls: ${series}: No such file or directory`;
+        seriesNotFoundError.hidden = false;
+      }
+    } else {
+      setCommand(`ls -d *`, `# list all series`);
+
+      const series_post_containers = document.querySelectorAll('.post-list');
+      series_post_containers.forEach(series_post_container => {
+        series_post_container.hidden = false;
+        series_post_container.parentNode.addEventListener('click', () => {
+          series_post_container.hidden = !series_post_container.hidden;
+        });
+      });
+
+      const series_list = document.querySelectorAll('.series');
+
+      series_list.forEach(series => {
+        series.hidden = false;
+      });
+    }
+  </script>  
+</section>
