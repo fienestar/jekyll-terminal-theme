@@ -114,3 +114,7 @@
 .post blockquote *:last-child {
     margin-bottom: 0;
 }
+
+.post code.highlighter-rouge {
+    color: #f4bf75;
+}
