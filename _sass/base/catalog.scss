@@ -1,0 +1,24 @@
+
+
+#page-catalog {
+    @media (width < 64rem) {
+        display: none;
+    }
+
+    position: fixed;
+    width: calc(50vw - 22.5rem);
+    top: 20vh;
+    right: 1rem;
+
+    color: #808080;
+
+    > .link-to-h1 {
+        color: #84d5a7;
+    }
+
+    > p > span {
+        font-size: 1.5rem;
+        line-height: 1rem;
+    }
+    
+}

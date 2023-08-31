@@ -1,0 +1,26 @@
+#categories.single-category .category {
+    > h2, > .size {
+        display: none;
+    }
+
+    > .total-text {
+        display: block;
+    }
+}
+
+.category {
+    > .total-text {
+        display: none;
+    }
+
+    > h2, > .size {
+        font-weight: 400;
+        font-size: 1rem;
+        display: inline-block;
+    }
+
+    > .size {
+        color: var(--size-color);
+        padding-left: 2px;
+    }
+}

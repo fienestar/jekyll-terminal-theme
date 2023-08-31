@@ -1,0 +1,18 @@
+#menu {
+    padding: 1rem;
+    max-width: 40rem;
+    margin: auto;
+}
+
+#menu > nav {
+    max-width: 25rem;
+    margin: 1rem auto 0 auto;
+}
+
+.menu-item {
+    display: block;
+}
+
+a.menu-item {
+    margin: 1rem;
+}

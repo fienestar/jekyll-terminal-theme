@@ -1,120 +1,121 @@
 .post {
     font-size: 1rem;
-}
-
-.post .post-tag {
-    color: #F5DB71;
-}
-
-.post a {
-    color: rgb(75, 204, 255);
-}
-
-.post a.post-title {
-    color: #94EEBC;
-}
-
-.post a.post-title > h1 {
-    font-weight: 100;
-    margin: 0;
-    font-size: 2.5rem;
-}
-
-.post h2 {
-    font-size: 1.5rem;
-}
-
-.post h3 {
-    font-size: 1.25rem;
-}
-
-.post h4 {
-    font-size: 1.1rem;
-}
-
-.post h5 {
-    font-size: 1rem;
-}
-
-.post h6 {
-    font-size: 0.9rem;
-}
-
-.post h2, .post h3, .post h4, .post h5, .post h6 {
-    font-weight: 100;
-    line-height: 1.75rem;
-    margin-top: 1rem;
-    margin-bottom: 0.75rem;
-    border-bottom: 1px solid;
-    padding-bottom: 0.2rem;
-}
-
-.post p, .post ul, .post ol {
-    margin-bottom: 1rem;
-}
-
-.post li {
-    line-height: 1.5rem;
-}
-
-.post table {
-    margin: 5px auto;
-    border-collapse: collapse;
-}
-
-.post th {
-    font-weight: 400;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.6);
-}
-
-.post tr:not(tr:last-child) > td {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.post th, .post td {
-    padding: 5px 10px;
-}
-
-.post pre.highlight {
-    margin: 5px 0;
-}
-
-.post {
     word-spacing: -0.2rem;
-}
 
-.post .highlight {
-    word-spacing: 0;
-}
+    code {
+        font-family: Menlo, Monaco, MesloLGS NF, 'Courier New', monospace, "Noto Sans KR";
+    }
 
-.post sub, .post sup {
-	line-height: 0;
-}
+    .post-tag {
+        color: #F5DB71;
+    }
 
-.post ul ul, .post ul ol, .post ol ul, .post ol ol {
-	margin-bottom: 0;
-}
+    a {
+        color: rgb(75, 204, 255);
+    }
 
-.post img, .post video {
-	max-width: 100%;
-	max-height: 100%;
-}
+    a.post-title {
+        color: var(--title-color);
+    }
 
-.post blockquote::before, .post blockquote::after {
-    content: none !important;
-}
+    a.post-title > h1 {
+        font-weight: 100;
+        margin: 0;
+        font-size: 2.5rem;
+    }
 
-.post blockquote {
-    background-color: rgba(63, 55, 78, 0.3);
-    padding: 0.5rem;
-    border-left: 0.25rem solid rgb(86, 84, 88);
-    margin-bottom: 1rem;
-}
+    h2 {
+        font-size: 1.5rem;
+    }
 
-.post blockquote *:last-child {
-    margin-bottom: 0;
-}
+    h3 {
+        font-size: 1.25rem;
+    }
 
-.post code.highlighter-rouge {
-    color: #f4bf75;
+    h4 {
+        font-size: 1.1rem;
+    }
+
+    h5 {
+        font-size: 1rem;
+    }
+
+    h6 {
+        font-size: 0.9rem;
+    }
+
+    h2, h3, h4, h5, h6 {
+        font-weight: 100;
+        line-height: 1.75rem;
+        margin-top: 1rem;
+        margin-bottom: 0.75rem;
+        border-bottom: 1px solid;
+        padding-bottom: 0.2rem;
+    }
+
+    p, ul, ol {
+        margin-bottom: 1rem;
+    }
+
+    li {
+        line-height: 1.5rem;
+    }
+
+    table {
+        margin: 5px auto;
+        border-collapse: collapse;
+    }
+
+    th {
+        font-weight: 400;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+    }
+
+    tr:not(tr:last-child) > td {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    th, td {
+        padding: 5px 10px;
+    }
+
+    pre.highlight {
+        margin: 5px 0;
+    }
+
+    .highlight {
+        word-spacing: 0;
+    }
+
+    sub, sup {
+        line-height: 0;
+    }
+
+    ul ul, ul ol, ol ul, ol ol {
+        margin-bottom: 0;
+    }
+
+    img, video {
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    blockquote::before, blockquote::after {
+        content: none !important;
+    }
+
+    blockquote {
+        background-color: rgba(63, 55, 78, 0.3);
+        padding: 0.5rem;
+        border-left: 0.25rem solid rgb(86, 84, 88);
+        margin-bottom: 1rem;
+    }
+
+    blockquote *:last-child {
+        margin-bottom: 0;
+    }
+
+    code.highlighter-rouge {
+        color: #f4bf75;
+    }
 }

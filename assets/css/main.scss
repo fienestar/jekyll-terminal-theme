@@ -1,11 +1,9 @@
 ---
 ---
 
-@import "command";
-@import "highlight";
-@import "mathjax";
-@import "mermaid";
+@import "base";
+@import "custom/custom";
+@import "external";
 @import "post-list";
+@import "colors";
 @import "post";
-@import "style";
-@import "custom";

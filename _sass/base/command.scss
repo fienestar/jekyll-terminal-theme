@@ -13,16 +13,16 @@
 
 .command {
     font-size: 0.8rem;
-}
 
-.command > * {
-    display: inline-block;
-}
-
-.command > .seperator {
-    color: #3af180;
-}
-
-.command > .comment {
-    color: rgba(170, 170, 170, 0.6);
+    > * {
+        display: inline-block;
+    }
+    
+    > .seperator {
+        color: #3af180;
+    }
+    
+    > .comment {
+        color: rgba(170, 170, 170, 0.6);
+    }
 }

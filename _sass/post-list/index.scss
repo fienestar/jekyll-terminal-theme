@@ -1,0 +1,35 @@
+@import "category";
+@import "series";
+@import "tag";
+
+.post-list {
+    margin-bottom: 2.5px;
+    padding-left: 10px;
+
+    > .post-preview {
+        > .title {
+            display: inline-block;
+            color: var(--title-color);
+        }
+
+        > .title > .post-preview-redirect-title {
+            color: orange;
+        }
+
+        > .date {
+            display: inline-block;
+        }
+
+        > .description {
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            color: #858BB9;
+            margin-left: 5px;
+            line-height: 1.53;
+            font-size: 0.9rem;
+            word-break: break-word;
+            overflow: hidden;
+            -webkit-line-clamp: 2;
+        }
+    }
+}
