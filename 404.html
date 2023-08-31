@@ -18,9 +18,25 @@ layout: base
     request_path = request_path.slice(baseurl.length);
   }
 
-  setCommand(`cat "${request_path}"`)
+  if(request_path.startsWith('/')) {
+    request_path = request_path.slice(1);
+  }
 
-  const pageNotFoundError = document.querySelector('#page-not-found-error');
-  pageNotFoundError.innerText = `cat: ${request_path}: No such file or directory`;
-  pageNotFoundError.hidden = false;
+  if(request_path.endsWith('.md')) {
+    const split = request_path.split('/');
+    let filename = split.at(-1);
+
+    if(request_path.match(/\/\d{4}\/\d{2}\/\d{2}\//) === null)
+      filename = filename.replace(/^\d{4}-\d{2}-\d{2}-/, v => v.replaceAll('-', '/'));
+    split[split.length-1] = filename.slice(0, -'md'.length) + 'html';
+    console.log([baseurl, ...split].join('/'))
+    location.href = [baseurl, ...split].join('/');
+  } else {
+    request_path = decodeURIComponent(request_path);
+    setCommand(`cat "${request_path}"`)
+
+    const pageNotFoundError = document.querySelector('#page-not-found-error');
+    pageNotFoundError.innerText = `cat: ${request_path}: No such file or directory`;
+    pageNotFoundError.hidden = false;
+  }
 </script>  
