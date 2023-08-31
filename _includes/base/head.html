@@ -3,7 +3,7 @@
 
 <link href='https://fonts.googleapis.com/css?family=Noto Sans KR' rel='stylesheet'>
 
-<link href="{{ site.css | relative_url }}/main.css" rel="stylesheet" type="text/css">
+<link href="{{ site.css | relative_url }}/main.css?version={{ site.version }}" rel="stylesheet" type="text/css">
 
 <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 <script type="text/x-mathjax-config">
@@ -15,4 +15,4 @@
     });
 </script>
 
-<script type="module" src="{{ '/assets/js/mermaid.js' | relative_url }}"></script>
+<script type="module" src="{{ site.js | relative_url }}/mermaid.js?version={{ site.version }}"></script>
