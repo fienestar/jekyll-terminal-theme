@@ -2,8 +2,11 @@
 {% assign command_text = "cat " | append: filename %}
 {% include command/index.html cwd = "~" text = command_text %}
 
-<div class="post">
-    <a class="post-title"><h1>{{ page.title }}</h1></a>
+<article class="post">
+    <a class="post-title"><h1 id="{{ page.title | strip_html }}">{{ page.title }}</h1></a>
     <hr/><br/>
     {{ content }}
 </div>
+{% if site.catalog %}
+{% include catalog/index.html %}
+{% endif %}

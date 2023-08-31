@@ -1,0 +1,31 @@
+<nav id="page-catalog">
+    <script>
+        function parseCatalog()
+        {
+            return Array.from(document.querySelectorAll('h1, h2, h3, h4, h5, h6'))
+                .filter(heading => heading.id)
+                .map((heading, i) => {
+                    const n = parseInt(heading.tagName.slice(1));
+                    const padCount = (n - 1);
+                    const pad = '&nbsp;'.repeat(padCount);
+
+                    let onclick = '';
+                    if(i === 0)
+                        onclick = 'onclick="window.scrollTo(0, 0); return false"';
+
+                    return `<p class="link-to-h${n}"><span>${pad}</span><a href="#${heading.id}" ${onclick}>${heading.innerText}</a></p>`;
+                });
+        }
+    
+        function renderCatalog(catalog)
+        {
+            const catalogElement = document.querySelector('#page-catalog');
+            catalogElement.innerHTML = catalog.join('');
+        }
+
+        const catalog = parseCatalog();
+    
+        if(catalog.length > 1)
+            renderCatalog(catalog);
+    </script>
+</nav>

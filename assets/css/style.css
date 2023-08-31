@@ -141,3 +141,27 @@ footer {
 footer a {
     color: rgb(75, 204, 255);
 }
+
+@media (width < 64rem) {
+    #page-catalog {
+        display: none;
+    }
+}
+
+#page-catalog {
+    position: fixed;
+    width: calc(50vw - 22.5rem);
+    top: 20vh;
+    right: 1rem;
+
+    color: #808080;
+}
+
+#page-catalog > .link-to-h1 {
+    color: #84d5a7;
+}
+
+#page-catalog > p > span {
+    font-size: 1.5rem;
+    line-height: 1rem;
+}
