@@ -7,6 +7,7 @@ tags: [hello, world]
 ---
 
 this is my first post!
+You can find information of this theme in [about.md](/jekyll-terminal-theme/about/)
 
 | 1 | 2 | 3 |
 |:--:|:--:|:--:|
