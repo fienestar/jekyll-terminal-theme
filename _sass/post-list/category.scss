@@ -7,11 +7,15 @@
         display: block;
     }
 
-    > .post-list > .post-preview {
-        margin-top: 1rem;
+    > .post-list > .post-preview  {
+        margin-top: 0.5rem;
 
         .date {
             float: right;
+        }
+
+        .description {
+            display: -webkit-box;
         }
     }
 }
@@ -38,6 +42,10 @@
         .date {
             display: inline;
             float: none;
+        }
+
+        .description {
+            display: none;
         }
     }
 }

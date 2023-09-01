@@ -13,6 +13,10 @@
         .date {
             float: right;
         }
+
+        .description {
+            display: -webkit-box;
+        }
     }
 }
 
@@ -38,6 +42,10 @@
         .date {
             display: inline;
             float: none;
+        }
+
+        .description {
+            display: none;
         }
     }
 }

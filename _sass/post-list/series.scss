@@ -6,6 +6,18 @@
     > .total-text {
         display: block;
     }
+
+    > .post-list > .post-preview {
+        margin-top: 0.5rem;
+
+        .date {
+            float: right;
+        }
+
+        .description {
+            display: -webkit-box;
+        }
+    }
 }
 
 .series {
@@ -22,6 +34,19 @@
     > .size {
         color: var(--size-color);
         padding-left: 2px;
+    }
+
+    > .post-list > .post-preview {
+        margin-top: 0;
+
+        .date {
+            display: inline;
+            float: none;
+        }
+
+        .description {
+            display: none;
+        }
     }
 }
 
