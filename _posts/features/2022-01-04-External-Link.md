@@ -18,4 +18,4 @@ if you set `external-posts-category-name` in `_config.yml`, you can see all exte
 external-posts-category-name: external-links 
 ```
 
-[/categories#external%20links](/jekyll-terminal-theme/categories#external-links)
+[/categories#external-links](/jekyll-terminal-theme/categories#external-links)
