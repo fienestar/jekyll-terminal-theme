@@ -1,0 +1,14 @@
+{% assign posts = site.posts | where: "series", include.post.series %}
+
+{% if posts.size != 1 %}
+<div class="series-sublist" id="-{{ include.post.series }}" {% if include.hidden %}hidden{% endif %}>
+<p class="name">{{ include.post.series }}</a>
+{% for post in posts reversed %}
+    {% assign is_current = false %}
+    {% if post == include.post %}
+        {% assign is_current = true %}
+    {% endif %}
+    {% include post-list/preview.html post=post hideDate=true is_current=is_current %}
+{% endfor %}
+</div>
+{% endif %}

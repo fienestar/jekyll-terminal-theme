@@ -24,3 +24,43 @@
         padding-left: 2px;
     }
 }
+
+.series-sublist {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px rgba(255, 255, 255, 0.1) solid;
+    text-align: center;
+
+    > .name {
+        color: #ff8080;
+
+        font-weight: 100;
+        font-size: 1.5rem;
+
+        > .size {
+            color: var(--size-color);
+            display: inline-block;
+        }
+    }
+
+    .post-preview {
+        > .title {
+            margin-top: 0.2rem;
+            
+            > a {
+                color: #FFFFFF;
+            }
+
+            &.current > a {
+                color: rgba(255, 255, 255, 0.6);
+            }
+        }
+    }
+}
+
+.post-title + hr + .series-sublist {
+    padding-top: 0;
+    padding-bottom: 1rem;
+    border-top: none;
+    border-bottom: 1px rgba(255, 255, 255, 0.1) solid;
+}
