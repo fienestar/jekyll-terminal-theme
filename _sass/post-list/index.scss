@@ -7,17 +7,23 @@
     padding-left: 10px;
 
     > .post-preview {
+        margin-top: 1rem;
+
         > .title {
             display: inline-block;
             color: var(--title-color);
         }
 
         > .title > .post-preview-redirect-title {
-            color: orange;
+            color: rgb(255, 201, 101);
         }
 
         > .date {
-            display: inline-block;
+            color: rgb(147, 147, 147);
+            margin-top: 0.25rem;
+            font-size: 0.75rem;
+            float: right;
+            display: block;
         }
 
         > .description {

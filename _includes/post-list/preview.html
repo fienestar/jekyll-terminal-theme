@@ -13,6 +13,9 @@
             href="{{ site.baseurl }}{{ url }}"
         {% endif %}
     >{{ title }}</a></p>
+    {% unless include.hideDate %}
+    <p class="date" title="{{ date_title }}">{{ date }}</p>
+    {% endunless %}
     {% if include.description %}
         <p class="description">
             {% if include.post.description == null %}

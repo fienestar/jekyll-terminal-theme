@@ -49,13 +49,18 @@
     h2, h3, h4, h5, h6 {
         font-weight: 100;
         line-height: 1.75rem;
-        margin-top: 1rem;
+        margin-top: 3rem;
         margin-bottom: 0.75rem;
-        border-bottom: 1px solid;
+        border-bottom: 1px rgba(255, 255, 255, 0.1) solid;
         padding-bottom: 0.2rem;
     }
 
-    p, ul, ol {
+    p {
+        margin-top: 0.2rem;
+    }
+
+    ul, ol {
+        margin-top: 0.4rem;
         margin-bottom: 1rem;
     }
 
@@ -82,7 +87,7 @@
     }
 
     pre.highlight {
-        margin: 5px 0;
+        margin: 1rem 0;
     }
 
     .highlight {
@@ -98,6 +103,8 @@
     }
 
     img, video {
+        display: block;
+        margin: 1rem auto;
         max-width: 100%;
         max-height: 100%;
     }
@@ -108,9 +115,9 @@
 
     blockquote {
         background-color: rgba(63, 55, 78, 0.3);
-        padding: 0.5rem;
+        padding: 0.5rem 0.5rem 0.5rem 1rem;
         border-left: 0.25rem solid rgb(86, 84, 88);
-        margin-bottom: 1rem;
+        margin: 1rem 0;
     }
 
     blockquote *:last-child {
@@ -119,5 +126,22 @@
 
     code.highlighter-rouge {
         color: #f4bf75;
+    }
+
+    hr {
+        opacity: 0.1;
+        margin: 3rem 0;
+    }
+
+    .post-title + hr {
+        opacity: initial;
+        margin: auto;
+    }
+
+    .published {
+        margin-top: 0.25rem;
+        float: right;
+        font-size: 0.8rem;
+        color: rgb(147, 147, 147);
     }
 }

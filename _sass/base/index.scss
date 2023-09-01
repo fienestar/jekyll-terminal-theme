@@ -3,13 +3,29 @@
 @import "command";
 
 * {
-    margin: 0
+    margin: 0;
 }
 
 html {
     -webkit-text-size-adjust: none;
     box-sizing: border-box;
     font-family: Menlo, Monaco, MesloLGS NF, 'Courier New', monospace, "Noto Sans KR";
+
+    scrollbar-width: 5px;
+
+    &::-webkit-scrollbar {
+        max-width: 5px;
+        max-height: 5px;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+        background-color: rgb(68, 68, 68);
+        border-radius: 5px;
+    }
+    
+    &::-webkit-scrollbar-corner {
+        background: rgba(0,0,0,0);
+    }
 }
 
 body {

@@ -15,7 +15,7 @@ layout: base
         <a class="name">#{{ name }}</a>
       </h2>
       <p class="size">({{ posts.size }})</p>
-      {% include post-list/index.html posts=posts %}
+      {% include post-list/index.html posts=posts description=true %}
     </div>
     {% endfor %}
   </div>

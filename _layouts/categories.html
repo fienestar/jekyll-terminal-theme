@@ -9,7 +9,7 @@ layout: base
     {% for pair in site.categories %}
       {% assign name = pair[0] %}
       {% assign posts = pair[1] %}
-      {% include post-list/category.html name=name posts=posts %}
+      {% include post-list/category.html name=name posts=posts description=true %}
     {% endfor %}
     {% if site.external-posts-category-name %}
       {% assign external-posts = site.posts | where_exp: "post", "post.redirect" %}
