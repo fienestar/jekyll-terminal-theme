@@ -1,0 +1,20 @@
+{% if include.post.previous.redirect %}
+    {% assign previous_list = site.posts | where_exp: "post", "post.date <= include.post.date" | where_exp: "post", "post.redirect == nil" %}
+    {% comment %}
+        포스팅 날짜가 동일한 경우가 있으므로 순회해야합니다.
+    {% endcomment %}
+    {% assign index = nil %}
+    {% for post in previous_list %}
+        {% if post == include.post %}
+            {% assign index = forloop.index %}
+            {% break %}
+        {% endif %}
+    {% endfor %}
+    {% assign previous = previous_list[index] %}
+{% else %}
+    {% assign previous = include.post.previous %}
+{% endif %}
+
+{% if previous %}
+<a class="post-previous" href="{{ previous.url | relative_url }}"/><span>{{ previous.title }}</span></a>
+{% endif %}

@@ -1,0 +1,30 @@
+.post-bidirectional-nav {
+    margin-top: 1rem;
+    padding-top: 1rem;
+
+    border-top: 1px rgba(255,255,255,0.1) solid;
+
+    .post-previous{
+        float: left;
+        width: 50%;
+
+        text-align: start;
+
+        &::before {
+            margin-left: 1rem;
+            content: "← "
+        }
+    }
+
+    .post-next {
+        float: right;
+        width: 50%;
+
+        text-align: end;
+
+        &::after {
+            margin-right: 1rem;
+            content: " →";
+        }
+    }
+}
