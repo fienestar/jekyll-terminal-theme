@@ -12,6 +12,7 @@
         > .title {
             display: inline-block;
             color: var(--title-color);
+            word-spacing: -0.2rem;
         }
 
         > .title > .post-preview-redirect-title {
