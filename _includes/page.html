@@ -3,7 +3,7 @@
 {% include command/index.html cwd = "~" text = command_text %}
 
 <article class="post">
-    <a class="post-title"><h1 id="{{ page.title | strip_html }}">{{ page.title }}</h1></a>
+    <a class="post-title"><h1 id="{{ page.title | strip_html }}" href="{{ page.url }}">{{ page.title }}</h1></a>
     <hr/><br/>
     {{ content }}
 </article>
