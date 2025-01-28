@@ -13,6 +13,7 @@
 
 .command {
     font-size: 0.8rem;
+    font-family: Menlo, "MesloLGS NF", "Malgun Gothic", "Pretendard Variable", ui-sans-serif, -apple-system, "Apple SD Gothic Neo", sans-serif;
 
     > * {
         display: inline-block;
@@ -25,4 +26,8 @@
     > .comment {
         color: rgba(170, 170, 170, 0.6);
     }
+}
+
+.total-text {
+    font-family: Menlo, "MesloLGS NF", "Malgun Gothic", "Pretendard Variable", ui-sans-serif, -apple-system, "Apple SD Gothic Neo", sans-serif;
 }

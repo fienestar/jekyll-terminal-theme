@@ -16,7 +16,7 @@
 {% include post/series-list.html post=page hidden=true %}
 {% endif %}
 <span class="published" title="{{ page.date }}">{{ page.date | date: "%F" }}</span>
-<br/>
+<p style="height: 1.5rem;">&ZeroWidthSpace;</p>
 {{ content }}
 {% if page.tags.size != 0 %}
     <br/>

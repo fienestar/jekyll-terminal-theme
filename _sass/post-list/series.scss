@@ -21,12 +21,14 @@
 }
 
 .series {
+    font-family: Menlo, "MesloLGS NF", "Malgun Gothic", "Pretendard Variable", ui-sans-serif, -apple-system, "Apple SD Gothic Neo", sans-serif;
+
     > .total-text {
         display: none;
     }
     
     > h2, > .size {
-        font-weight: 400;
+        font-weight: 300;
         font-size: 1rem;
         display: inline-block;
     }
@@ -56,11 +58,14 @@
     border-top: 1px rgba(255, 255, 255, 0.1) solid;
     text-align: center;
 
+    font-family: Menlo, "MesloLGS NF", "Malgun Gothic", "Pretendard Variable", ui-sans-serif, -apple-system, "Apple SD Gothic Neo", sans-serif;
+
     > .name {
         color: #ff8080;
 
-        font-weight: 100;
-        font-size: 1.5rem;
+        line-height: normal;
+        font-weight: 300;
+        font-size: 1.2rem;
 
         > .size {
             color: var(--size-color);
@@ -71,9 +76,15 @@
     .post-preview {
         > .title {
             margin-top: 0.2rem;
+
+            font-size: 1rem;
             
             > a {
                 color: #FFFFFF;
+            }
+
+            > a:hover {
+                color:rgb(75, 204, 255);
             }
 
             &.current > a {

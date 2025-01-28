@@ -10,9 +10,9 @@
         margin-top: 1rem;
 
         > .title {
+            font-family: Menlo, "MesloLGS NF", "Malgun Gothic", "Pretendard Variable", ui-sans-serif, -apple-system, "Apple SD Gothic Neo", sans-serif;
             display: inline-block;
             color: var(--title-color);
-            word-spacing: -0.2rem;
         }
 
         > .title > .post-preview-redirect-title {
@@ -20,6 +20,7 @@
         }
 
         > .date {
+            font-family: Menlo, "MesloLGS NF", "Malgun Gothic", "Pretendard Variable", ui-sans-serif, -apple-system, "Apple SD Gothic Neo", sans-serif;
             color: rgb(147, 147, 147);
             margin-top: 0.25rem;
             font-size: 0.75rem;

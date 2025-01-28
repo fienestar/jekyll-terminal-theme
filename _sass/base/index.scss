@@ -9,23 +9,7 @@
 html {
     -webkit-text-size-adjust: none;
     box-sizing: border-box;
-    font-family: Menlo, Monaco, MesloLGS NF, 'Courier New', monospace, "Noto Sans KR";
-
-    scrollbar-width: 5px;
-
-    &::-webkit-scrollbar {
-        max-width: 5px;
-        max-height: 5px;
-    }
-    
-    &::-webkit-scrollbar-thumb {
-        background-color: rgb(68, 68, 68);
-        border-radius: 5px;
-    }
-    
-    &::-webkit-scrollbar-corner {
-        background: rgba(0,0,0,0);
-    }
+    font-family: "Malgun Gothic", "Pretendard Variable", ui-sans-serif, -apple-system, "Apple SD Gothic Neo", sans-serif;
 }
 
 body {
@@ -44,7 +28,8 @@ header {
 }
 
 .site-title > a {
-    font-weight: 100;
+    font-family: Menlo, "MesloLGS NF", "Malgun Gothic", "Pretendard Variable", ui-sans-serif, -apple-system, "Apple SD Gothic Neo", sans-serif;
+    font-weight: 400;
     color: #858BB9;
     font-size: 1.5rem;
 }

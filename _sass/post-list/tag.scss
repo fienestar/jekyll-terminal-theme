@@ -21,12 +21,14 @@
 }
 
 .tag {
+    font-family: Menlo, "MesloLGS NF", "Malgun Gothic", "Pretendard Variable", ui-sans-serif, -apple-system, "Apple SD Gothic Neo", sans-serif;
+
     > .total-text {
         display: none;
     }
 
     > h2, > .size {
-        font-weight: 400;
+        font-weight: 300;
         font-size: 1rem;
         display: inline-block;
     }
