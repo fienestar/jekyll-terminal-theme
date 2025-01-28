@@ -17,11 +17,6 @@ body {
     background-color: #1c1a2a;
 }
 
-.root {
-    max-width: 40rem;
-    margin: auto;
-}
-
 header {
     text-align: center;
     margin-top: 1rem;
@@ -50,23 +45,46 @@ a {
 }
 
 a:hover {
-    text-decoration: underline;
+    color:rgb(75, 204, 255);
 }
 
 main {
     padding: 1rem;
-    max-width: 40rem;
+    max-width: 44rem;
     margin: auto;
 }
 
-.root {
-    min-height: calc(100vh - 5.5rem)
+.layout {
+    scrollbar-gutter: stable;
+    overflow-y: scroll;
+    max-height: 100vh;
+    scrollbar-width: 5px;
+
+    &::-webkit-scrollbar {
+        max-width: 5px;
+        max-height: 5px;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+        background-color: rgb(68, 68, 68);
+        border-radius: 5px;
+    }
+    
+    &::-webkit-scrollbar-corner {
+        background: rgba(0,0,0,0);
+    }
+}
+
+.layout-content {
+    min-height: calc(100vh - 5.5rem);
+    max-width: 44rem;
+    margin: auto;
 }
 
 footer {
     height: 3rem;
     font-size: 0.9rem;
-    max-width: 40rem;
+    max-width: 44rem;
     width: 100%;
     text-align: center;
     margin: 1rem auto 0.5rem;
